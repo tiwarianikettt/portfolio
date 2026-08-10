@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #EAEAEA;
+    background-color: #121212;
+
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.landing-page {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    line-height: 23px;
+
+    background-image: url(../Images/Background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} @media (max-width: 468px) {
+    .home h1 {
+        font-size: 28px;
+    }
+
+    .home p {
+        font-size: 15px;
+    }
+
+    .home h4 {
+        font-size: 15px;
+    }
+}
+
+.landing-page p {
+    font-size: 0.8rem;
+}
+
+
+.home {
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: rgba(30, 30, 30, 0.85);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+    transition: all .4s ease;
+} @media (max-width: 768px) {
+    .home {
+        width: 80%;
+    }
+
+    .landing-page p {
+        font-size: 0.8rem;
+    }
+} @media (max-width: 468px) {
+    .home {
+        width: 90%;
+    }
+
+    .extra {
+        display: none;
+    }
+}
+
+.home:hover {
+    transform: translateY(-5px);
+}
+
+.home span {
+    font-size: smaller;
+}
+
+.home h4,
+.home h1,
+.home p {
+    margin: 10px;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    text-decoration: none;
+    color: #EAEAEA;
+    background-color: #b3963a;
+
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+
+    border-radius: 0.8rem;
+    transition: all 0.3s ease;
+} @media (max-width: 468px) {
+    .landing-page button {
+        font-size: 0.8rem;
+    }
+}
+
+button:hover {
+    background-color: #d4b54c;
+    transform: scale(1.03);
+}
+
+aside {
+    padding: 20px;
+    margin-left: 45px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+
+    width: 324px;
+
+    background-color: #1E1E1E;
+    border-radius: 30px;
+
+    position: sticky;
+    top: 20px;
+    bottom: 20px;
+}
+
+.photo img {
+    width: 300px;
+    height: auto;
+
+    display: block;
+    margin: auto;
+
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info h3 {
+    align-self: center;
+    padding: 20px;
+}
+
+.info h4 {
+    font-size: 10px;
+    padding: 10px;
+    background-color: rgb(46, 42, 42);
+    border-radius: 0.8rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 12px;
+    color: darkgray;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.socials a {
+    display: flex;
+    gap: 5px;
+}
+
+.contact-item i {
+    text-decoration: none;
+    color: #FFD54F;
+
+    background-color: rgb(46, 42, 42);
+
+    padding: 6px;
+    border-radius: 0.7rem;
+
+    transition: scale 0.3s ease;
+}
+
+.contact-item i:hover {
+    transform: scale(1.1);
+}
+
+main {
+    position: relative;
+    flex: 1;
+    padding: 40px;
+    background-color: #1E1E1E;
+    border-radius: 25px;
+    margin: 45px 45px 45px 30px;
+    height: 100%;
+}
+
+.about p,
+.about h3 {
+    color: #EAEAEA;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head h2 {
+    margin-bottom: 10px;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+
+    border-radius: 20px;
+    background-color: rgb(46, 42, 42);
+
+
+    display: flex;
+    gap: 50px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(192, 183, 183);
+
+    transition: transform 0.3s ease,
+        color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fafaf9;
+
+    transform: translateY(-3px);
+}
+
+nav .active {
+    color: #FFD54F;
+    text-decoration: underline;
+
+    transition: transform color 0.3s ease;
+}
+
+nav .active:hover {
+    transform: translateY(-3px);
+
+    color: #e8cf7b;
+}
+
+section {
+    padding: 20px;
+    line-height: 25px;
+}
+
+.about-card {
+    font-size: small;
+}
+
+.about-card h4 {
+    font-size: medium;
+}
+
+.about-card i {
+    color: #FFD54F;
+}
+
+.label {
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.edu-info {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    margin-bottom: 10px;
+}
+
+.education {
+    background-color: rgb(46, 42, 42);
+    border-radius: 0.8rem;
+
+    padding: 15px;
+
+    transition: scale 0.3s ease;
+}
+
+.education:hover {
+    transform: scale(1.03);
+}
+
+.skills {
+    background-color: rgb(46, 42, 42);
+    border-radius: 0.8rem;
+
+    padding: 15px;
+
+    transition: scale 0.3s ease;
+}
+
+.skills:hover {
+    transform: scale(1.03);
+}
+
+.tech {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.tech ul {
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.lead {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.sports {
+    background-color: rgb(46, 42, 42);
+    border-radius: 0.8rem;
+
+    padding: 15px;
+
+    transition: scale 0.3s ease;
+}
+
+.sports:hover {
+    transform: scale(1.03);
+}
+
+.lead ul {
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.project {
+    transition: scale 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.03);
+}
+
+.project-content {
+    background-color: rgb(46, 42, 42);
+    border-radius: 0.8rem;
+
+    padding: 15px;
+}
+
+.project ul {
+    padding-left: 40px;
+    padding-top: 10px;
+}
