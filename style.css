@@ -69,16 +69,6 @@ body {
     transition: all .4s ease;
 }
 
-@media (max-width: 768px) {
-    .home {
-        width: 80%;
-    }
-
-    .landing-page p {
-        font-size: 0.8rem;
-    }
-}
-
 .home:hover {
     transform: translateY(-5px);
 }
@@ -401,6 +391,14 @@ section {
 }
 
 @media (max-width: 768px) {
+    .home {
+        width: 80%;
+    }
+
+    .landing-page p {
+        font-size: 0.8rem;
+    }
+
     nav {
         width: 65%;
     }
