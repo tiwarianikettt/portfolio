@@ -13,6 +13,10 @@ body {
     align-items: center;
 }
 
+.mobile {
+    display: none;
+}
+
 .profile {
     display: flex;
     align-items: center;
@@ -35,18 +39,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-} @media (max-width: 468px) {
-    .home h1 {
-        font-size: 28px;
-    }
-
-    .home p {
-        font-size: 15px;
-    }
-
-    .home h4 {
-        font-size: 15px;
-    }
 }
 
 .landing-page p {
@@ -75,21 +67,15 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 
     transition: all .4s ease;
-} @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .home {
         width: 80%;
     }
 
     .landing-page p {
         font-size: 0.8rem;
-    }
-} @media (max-width: 468px) {
-    .home {
-        width: 90%;
-    }
-
-    .extra {
-        display: none;
     }
 }
 
@@ -125,10 +111,6 @@ button {
 
     border-radius: 0.8rem;
     transition: all 0.3s ease;
-} @media (max-width: 468px) {
-    .landing-page button {
-        font-size: 0.8rem;
-    }
 }
 
 button:hover {
@@ -152,12 +134,16 @@ aside {
     bottom: 20px;
 }
 
+.photo {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
 .photo img {
     width: 300px;
     height: auto;
-
-    display: block;
-    margin: auto;
 
     padding: 20px;
     border-radius: 50%;
@@ -170,7 +156,6 @@ aside {
 }
 
 .info h3 {
-    align-self: center;
     padding: 20px;
 }
 
@@ -184,7 +169,11 @@ aside {
 .contact-item {
     display: flex;
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
+}
+
+.details {
+    margin-bottom: 15px;
 }
 
 .title {
@@ -208,7 +197,6 @@ aside {
 }
 
 .contact-item i {
-    text-decoration: none;
     color: #FFD54F;
 
     background-color: rgb(46, 42, 42);
@@ -216,7 +204,7 @@ aside {
     padding: 6px;
     border-radius: 0.7rem;
 
-    transition: scale 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .contact-item i:hover {
@@ -246,6 +234,7 @@ main {
 
 .head h2 {
     margin-bottom: 10px;
+    font-size: 25px;
 }
 
 nav {
@@ -260,7 +249,6 @@ nav {
 
     display: flex;
     gap: 50px;
-
 }
 
 nav a {
@@ -279,9 +267,8 @@ nav a:hover {
 
 nav .active {
     color: #FFD54F;
-    text-decoration: underline;
 
-    transition: transform color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 nav .active:hover {
@@ -291,16 +278,16 @@ nav .active:hover {
 }
 
 section {
-    padding: 20px;
-    line-height: 25px;
+    padding: 3px;
+    line-height: 20px;
 }
 
 .about-card {
-    font-size: small;
+    font-size: 12px;
 }
 
 .about-card h4 {
-    font-size: medium;
+    font-size: 15px;
 }
 
 .about-card i {
@@ -326,7 +313,7 @@ section {
 
     padding: 15px;
 
-    transition: scale 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .education:hover {
@@ -339,7 +326,7 @@ section {
 
     padding: 15px;
 
-    transition: scale 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .skills:hover {
@@ -369,7 +356,7 @@ section {
 
     padding: 15px;
 
-    transition: scale 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .sports:hover {
@@ -391,10 +378,295 @@ section {
 
     padding: 15px;
 
-    transition: scale 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .project ul {
     padding-left: 40px;
     padding-top: 10px;
+}
+
+@media (max-width:1024px) {
+    nav {
+        width: 60%;
+
+        padding: 18px;
+
+        gap: 20px;
+    }
+
+    nav a { 
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 65%;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    section p {
+        font-size: 13px;
+    }
+
+    .about-card {
+        font-size: 10px;
+    }
+
+    .tech {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .lead {
+        grid-template-columns: 1fr;
+    }
+
+    .tech ul {
+        padding-left: 20px;
+    }
+
+    .lead ul {
+        padding-left: 20px;
+    }
+
+    aside.desktop {
+        width: 240px;
+
+        margin-left: 20px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    main {
+        margin: 30px 20px 30px 15px;
+        padding: 25px;
+    }
+
+    .photo img {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .info h4 {
+        font-size: 7px;
+    }
+
+    .contact-item {
+        font-size: 10px;
+    }
+
+    .head h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home h1 {
+        font-size: 28px;
+    }
+
+    .home p {
+        font-size: 15px;
+    }
+
+    .home h4 {
+        font-size: 15px;
+    }
+
+    .home {
+        width: 90%;
+    }
+
+    .extra {
+        display: none;
+    }
+
+    .landing-page button {
+        font-size: 0.8rem;
+    }
+
+    aside {
+        width: 90%;
+
+        margin: 20px 20px auto;
+        padding: 20px;
+
+        position: static;
+    }
+
+    .mobile {
+        display: block;
+
+        width: 90%;
+
+        margin: 20px auto 20px;
+
+        padding: 0px;
+
+        position: static;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .main_profile {
+        display: grid;
+        /* grid-template-columns: 1fr 1fr; */
+        grid-template-columns: minmax(110px, 1fr) minmax(130px, 1fr);
+        /* column-gap: 20px; */
+        gap: clamp(15px, 5vw, 35px);
+        align-items: center;
+    }
+
+    .profile_left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .profile_bottom {
+        width: 100%;
+
+        margin-top: 12px;
+    }
+
+    .profile_bottom .socials {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        font-size: 6px;
+
+        margin-bottom: 5px;
+    }
+
+    .photo img {
+        width: 120px;
+        height: auto;
+
+        padding: 12px;
+    }
+
+    .info h3 {
+        font-size: 8px;
+
+        padding-bottom: 10px;
+        padding-top: 0;
+    }
+
+    .info h4 {
+        padding: 6px;
+    }
+
+    .profile_right .contact-item {
+        padding: 6px 0;
+        gap: 7px;
+
+        font-size: 6px;
+    }
+
+    .profile_bottom .contact-item {
+        padding: 0;
+    }
+
+    .details {
+        margin-bottom: 5px;
+    }
+
+     .title {
+        font-size: 6px;
+    }
+
+    main {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .mobile h2 {
+        font-size: 18px;
+    }
+
+    .mobile-head nav {
+        position: static;
+
+        width: 100%;
+
+        border-radius: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        padding: 10px;
+    }
+
+    .mobile-head {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .mobile-head h2 {
+        margin-left: 0;
+    }
+
+     nav a {
+        font-size: 8px;
+    }
+
+     section {
+        font-size: 10px;
+    }
+
+    section p {
+        font-size: 10px;
+    }
+
+    .about-card i {
+        font-size: 8px;
+    }
+
+    .about-card h4 {
+        font-size: 10px;
+    }
+
+    .edu-info {
+        grid-template-columns: 80px 1fr;
+        column-gap: 10px;
+    }
+
+    .tech {
+        grid-template-columns: 1fr;
+    }
+
+    .lead {
+        grid-template-columns: 1fr;
+    }
+
 }
