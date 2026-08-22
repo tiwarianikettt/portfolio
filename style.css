@@ -376,6 +376,70 @@ section {
     padding-top: 10px;
 }
 
+.project a {
+    text-decoration: none;
+    color: #EAEAEA;
+    font-weight: bold;
+}
+
+.project a:hover {
+    color: #b3a5a5;
+}
+
+.contact {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-family: inherit;
+
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #EAEAEA;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(234, 234, 234, 0.5);
+}
+
+.contact-form button {
+    display: block;
+    margin: 10px auto 0;
+}
+
 @media (max-width:1024px) {
     nav {
         width: 60%;
