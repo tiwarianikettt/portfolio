@@ -367,6 +367,7 @@ section {
     border-radius: 0.8rem;
 
     padding: 15px;
+    margin: 15px;
 
     transition: transform 0.3s ease;
 }
@@ -384,6 +385,60 @@ section {
 
 .project a:hover {
     color: #b3a5a5;
+}
+
+.project-links {
+    padding-bottom: 25px;
+}
+
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.project-btn i {
+    font-size: 14px;
+}
+
+.live-btn {
+    color: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.github-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.video-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.project-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
 }
 
 .contact {
@@ -449,7 +504,7 @@ section {
         gap: 20px;
     }
 
-    nav a { 
+    nav a {
         font-size: 13px;
     }
 }
@@ -655,7 +710,7 @@ section {
         margin-bottom: 5px;
     }
 
-     .title {
+    .title {
         font-size: 6px;
     }
 
@@ -698,11 +753,11 @@ section {
         margin-left: 0;
     }
 
-     nav a {
+    nav a {
         font-size: 8px;
     }
 
-     section {
+    section {
         font-size: 10px;
     }
 
